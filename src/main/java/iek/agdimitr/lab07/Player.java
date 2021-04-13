@@ -19,8 +19,14 @@ public class Player {
     public Player(String f, String l){
         this.firstName = f;
         this.lastName = l;
-    }
+    }    
     //TODO Να φτιάξω μέθοδο για υπολογισμό ηλικίας από ημερομηνία
     //TODO Να φτιάξω μέθοδο για προσθήκη καλαθιών
     
+    
+    public void printStats(){
+        System.out.println("Fisrt Name :" + firstName);
+        System.out.println("Last Name :" + lastName);
+        System.out.println("Birth Date :" + birthDate);
+    }
 }
