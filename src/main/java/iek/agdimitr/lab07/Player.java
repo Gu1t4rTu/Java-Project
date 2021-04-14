@@ -32,14 +32,15 @@ public class Player {
         System.out.println("Birth Date :" + birthDate);
     }
     
+    @Override
     public String toString(){
         return "First Name: " + firstName + "  Last Name: " + lastName + 
                 ", Birth Date: " + birthDate;
     }
     
-    public void addPoint(int p){
-        points = p;
-        System.out.println("Οι πόντοι που προστέθηκαν είναι: " + points);
+    public void addPoint(){
+        points++;
+        System.out.println(" -> έχει " + points + " πόντους.");
     }
 
     public String getFirstName() {
@@ -54,16 +55,13 @@ public class Player {
         return points;
     }
     
-    public void removePoint(int p){
-        if (points <= 0){
-            points = 0; /*Θέτω ξανά τους πόντους με την τιμή 0 σε περίπτωση που
-                          είναι αρνητικοί οι πόντοι*/
-            System.out.println("Οι πόντοι είναι: " + points);
+    public void removePoint(){
+        if(points != 0){
+            points--;
+            System.out.println(" -> οι πόντοι τώρα είναι: " + points);
         }
-        else if(points > 0){
-            System.out.println("Οι πόντοι που θα αφιρεθούν είναι:" + p);
-            points -= p;
-            System.out.println("Οι πόντοι είναι: " + points);
+        else{
+            System.out.println(" -> Οι πόντοι είναι 0 δεν μπορεί να γίνει αφαίρεση.");
         }
     }
 }
